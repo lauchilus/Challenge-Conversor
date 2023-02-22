@@ -1,12 +1,14 @@
 package conversor;
 
+import java.text.DecimalFormat;
+
 import javax.swing.JOptionPane;
 import javax.xml.transform.Templates;
 
 public class MenusMoneda  extends Menus{
 	 static int moneda;
 	 static double valor;
-	 static double cuenta;
+	 static String cuenta;
 	 
 
 	public static void entradaValor() {
@@ -52,13 +54,19 @@ public class MenusMoneda  extends Menus{
 	
 	//valores de conversion actualizados para la fecha 22/02/2023
 	public static  void pesoADolar(double valor) {
-		cuenta = valor * 0.0051;
+		valor = valor * 0.0051;
+		DecimalFormat decimalFormat = new DecimalFormat("#.##");
+		String formattedNumber = decimalFormat.format(valor);
+		cuenta = formattedNumber;
 		System.out.println(cuenta);
 		
 	}
 	
 public static void dolarAPeso(double valor) {
-	cuenta = valor * 195.02;
+	valor = valor * 195.02;
+	DecimalFormat decimalFormat = new DecimalFormat("#.##");
+	String formattedNumber = decimalFormat.format(valor);
+	cuenta = formattedNumber;
 	System.out.println(cuenta);
 		
 	}

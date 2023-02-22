@@ -1,12 +1,14 @@
 package conversor;
 
+import java.text.DecimalFormat;
+
 import javax.swing.JOptionPane;
 
 public class MenusDistancia {
 
 	 static int distancia;
 	 static double valor;
-	 static double cuenta;
+	 static String cuenta;
 	
 	 //Usuario ingresa valor que solo permite numeros y punto para poder ingresar numeros decimales
 	 
@@ -48,17 +50,22 @@ public class MenusDistancia {
 	
 	public static void valorNoPermitido() {
 		JOptionPane.showMessageDialog(null, "Valor no Permitido ","Error", JOptionPane.ERROR_MESSAGE );
-		Menus.deseaContinuar();
 	}
 	
 	public static  void kmAMillas(double valor) {
-		cuenta = valor * 0.62;
-		System.out.println(cuenta);
+		valor = valor * 0.62;
+		DecimalFormat decimalFormat = new DecimalFormat("#.##");
+		String formattedNumber = decimalFormat.format(valor);
+		cuenta = formattedNumber;
+		System.out.println(formattedNumber);
 		
 	}
 	
 public static void millasAKm(double valor) {
-	cuenta = valor * 1.6;
+	valor = valor * 1.6;
+	DecimalFormat decimalFormat = new DecimalFormat("#.##");
+	String formattedNumber = decimalFormat.format(valor);
+	cuenta = formattedNumber;
 	System.out.println(cuenta);
 		
 	}

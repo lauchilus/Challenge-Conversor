@@ -1,13 +1,15 @@
 package conversor;
 
+import java.text.DecimalFormat;
+
 import javax.swing.JOptionPane;
 
 public class MenuTemperatura extends Menus{
 	static int tipo;
 	 static double valor;
-	 static double cuenta;
+	 static String cuenta;
 	 
-	 public void entradaValor() {
+	 public static void entradaValor() {
 		String inputConversion = JOptionPane.showInputDialog(null,"Ingrese temperatura a convertir:" );
 		if(!inputConversion.matches("^\\d+(\\.\\d+)?$")) {
 			valorNoPermitido();
@@ -49,13 +51,19 @@ public class MenuTemperatura extends Menus{
 	}
 	
 	public static  void DeCelsiusAFahrenheit(double valor) {
-		cuenta = valor * 1.8 + 32;
+		valor = valor * 1.8 + 32;
+		DecimalFormat decimalFormat = new DecimalFormat("#.##");
+		String formattedNumber = decimalFormat.format(valor);
+		cuenta = formattedNumber;
 		System.out.println(cuenta);
 		
 	}
 	
 public static void DeFahrenheitACelsius(double valor) {
-	cuenta = (valor - 32)/1.8;
+	valor = (valor - 32)/1.8;
+	DecimalFormat decimalFormat = new DecimalFormat("#.##");
+	String formattedNumber = decimalFormat.format(valor);
+	cuenta = formattedNumber;
 	System.out.println(cuenta);
 		
 	}
