@@ -14,6 +14,8 @@ public class Menus {
 		dist = new MenusDistancia();
 		
 	}
+	
+	//Dependiendo la opcion que el usuario elija ejecuta la clase correspondiente
 	public static void menuPrincipal() {
 		String [] options = {"Conversor de Moneda","Conversor de Temperatura","Conversor de Distancias"};
 		Object option = JOptionPane.showInputDialog(null,"Seleccione tipo de conversión:","Menu",JOptionPane.PLAIN_MESSAGE, null, options, options[0]);

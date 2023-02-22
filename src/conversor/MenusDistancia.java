@@ -5,10 +5,11 @@ import javax.swing.JOptionPane;
 public class MenusDistancia {
 
 	 static int distancia;
-	 //static Object option;
 	 static double valor;
 	 static double cuenta;
 	
+	 //Usuario ingresa valor que solo permite numeros y punto para poder ingresar numeros decimales
+	 
 	public static void entradaValor() {
 		String inputConversion = JOptionPane.showInputDialog(null,"Ingrese distancia a convertir:" );
 		if(!inputConversion.matches("^\\d+(\\.\\d+)?$")) {

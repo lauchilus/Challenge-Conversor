@@ -4,7 +4,6 @@ import javax.swing.JOptionPane;
 
 public class MenuTemperatura extends Menus{
 	static int tipo;
-	 static Object option;
 	 static double valor;
 	 static double cuenta;
 	 

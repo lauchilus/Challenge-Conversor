@@ -5,7 +5,6 @@ import javax.xml.transform.Templates;
 
 public class MenusMoneda  extends Menus{
 	 static int moneda;
-	 //static Object option;
 	 static double valor;
 	 static double cuenta;
 	 
@@ -51,14 +50,15 @@ public class MenusMoneda  extends Menus{
 		Menus.deseaContinuar();
 	}
 	
+	//valores de conversion actualizados para la fecha 22/02/2023
 	public static  void pesoADolar(double valor) {
-		cuenta = valor * 0.0052;
+		cuenta = valor * 0.0051;
 		System.out.println(cuenta);
 		
 	}
 	
 public static void dolarAPeso(double valor) {
-	cuenta = valor * 193.19;
+	cuenta = valor * 195.02;
 	System.out.println(cuenta);
 		
 	}
